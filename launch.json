@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "ClausToken",
+    "name": "Claus",
+    "symbol": "CLAUS",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 8800,
+    "initialMarketCapWei": "2500000000000000000000",
+    "remainderTo": "0xf2816f3f05fac35577b1930ffd09b531b62628df"
+  },
+  "notes": "ClausToken (src/ClausToken.sol) is a fixed-supply OpenZeppelin v5.4.0 ERC20 named Claus with symbol CLAUS and 18 decimals. Its constructor takes no arguments and mints the whole supply of 1,000,000,000 CLAUS (1000000000000000000000000000 minor units) once to msg.sender, which on this launch is the ProjectFactory. There is no owner, minter, pauser, blocklist, fee, tax, reflection or transfer restriction, and no delegatecall, callcode or selfdestruct in the runtime: every transfer delivers exactly the amount requested, so the swarm share, the pool seed and the remainder arrive whole and traders buy and sell through the PoolManager unhindered. Nothing can mint after construction. The launch deploys no application contracts. The pool pairs with IMD at 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 at the launch policy's 1.25% fee with tick spacing 60; initialPrice is provenance only, the deployer derives the opening price from economics.initialMarketCapWei (2,500 IMD for the whole supply) and totalSupply. Economics are the requester's verbatim: 88% of the supply seeds the pool and the remainder of the requester's share goes to 0xf2816f3f05fac35577b1930ffd09b531b62628df."
+}
